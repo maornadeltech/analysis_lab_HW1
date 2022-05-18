@@ -3,7 +3,7 @@ import os
 import pandas as pd
 import pickle
 import data_loader
-model_path = ''
+model_path = '/home/student/data/model.pkl'
 imputer_path = '/home/student/data/imputer.pkl'
 
 data_path = sys.argv[1]
