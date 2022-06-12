@@ -40,6 +40,4 @@ for path in tqdm.tqdm(os.listdir(data_path)):
 if vecs:
     res['SepsisLabel'].extend(model.predict(np.stack(vecs)).tolist())
 
-print(f"f1 = {f1_score(np.asarray(reals), np.asarray(res['SepsisLabel']))}")
-
 pd.DataFrame.from_dict(res).to_csv('prediction.csv', index=False)
